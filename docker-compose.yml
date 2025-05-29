@@ -1,0 +1,99 @@
+version: '3.9'
+
+services:
+    apigateway:
+        build:
+            context: ./ApiGateway
+            dockerfile: Dockerfile
+        ports:
+            - '8000:8080'
+        environment:
+            - ASPNETCORE_ENVIRONMENT=Development
+            - ASPNETCORE_URLS=http://+:8080
+        depends_on:
+            - filestoringservice
+            - fileanalysisservice
+        restart: unless-stopped
+        networks:
+            - app-network
+
+    filestoringservice:
+        build:
+            context: ./FileStoringService
+            dockerfile: Dockerfile
+        ports:
+            - '8001:8080'
+        environment:
+            - ASPNETCORE_ENVIRONMENT=Development
+            - ASPNETCORE_URLS=http://+:8080
+            - ConnectionStrings__AppDatabase=Host=db_filestoring;Port=5432;Database=file_storing_db;Username=user;Password=password
+            - FileStorage__BasePath=/app/storage
+        volumes:
+            - filestoring_files_data:/app/storage
+        depends_on:
+            - db_filestoring
+        restart: unless-stopped
+        networks:
+            - app-network
+
+    fileanalysisservice:
+        build:
+            context: ./FileAnalysisService
+            dockerfile: Dockerfile
+        ports:
+            - '8002:8080'
+        environment:
+            - ASPNETCORE_ENVIRONMENT=Development
+            - ASPNETCORE_URLS=http://+:8080
+            - ConnectionStrings__AppDatabase=Host=db_fileanalysis;Port=5432;Database=file_analysis_db;Username=user;Password=password
+            - ServiceUrls__FileStoringService=http://filestoringservice:8080
+            - WordCloudApi__BaseUrl=https://quickchart.io
+            - WordCloudApi__TimeoutSeconds=30
+            - Logging__LogLevel__Default=Information
+            - Logging__LogLevel__Microsoft.AspNetCore=Warning
+        volumes:
+            - analysis_files_data:/app/storage
+        depends_on:
+            - db_fileanalysis
+            - filestoringservice
+        restart: unless-stopped
+        networks:
+            - app-network
+
+    db_filestoring:
+        image: postgres:16-alpine
+        environment:
+            - POSTGRES_USER=user
+            - POSTGRES_PASSWORD=password
+            - POSTGRES_DB=file_storing_db
+        ports:
+            - '5433:5432'
+        volumes:
+            - filestoring_data:/var/lib/postgresql/data
+        restart: unless-stopped
+        networks:
+            - app-network
+
+    db_fileanalysis:
+        image: postgres:16-alpine
+        environment:
+            - POSTGRES_USER=user
+            - POSTGRES_PASSWORD=password
+            - POSTGRES_DB=file_analysis_db
+        ports:
+            - '5434:5432'
+        volumes:
+            - fileanalysis_data:/var/lib/postgresql/data
+        restart: unless-stopped
+        networks:
+            - app-network
+
+volumes:
+    filestoring_data:
+    fileanalysis_data:
+    filestoring_files_data:
+    analysis_files_data:
+
+networks:
+    app-network:
+        driver: bridge
