@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<coverage line-rate="0.3457" branch-rate="0.5" version="1.9" timestamp="1748552122" lines-covered="222" lines-valid="642" branches-covered="49" branches-valid="98">
+<coverage line-rate="0.3676" branch-rate="0.5" version="1.9" timestamp="1748553596" lines-covered="236" lines-valid="642" branches-covered="49" branches-valid="98">
   <sources>
     <source>E:\HSE\course2\software design\seminars\BigHW2\FileAnalysisService\</source>
   </sources>
   <packages>
-    <package name="FileAnalysisService" line-rate="0.3457" branch-rate="0.5" complexity="154">
+    <package name="FileAnalysisService" line-rate="0.3676" branch-rate="0.5" complexity="154">
       <classes>
         <class name="AnalysisController" filename="Controllers\FileAnalysisController.cs" line-rate="0" branch-rate="1" complexity="1">
           <methods>
@@ -1652,112 +1652,112 @@
             <line number="79" hits="0" branch="False" />
           </lines>
         </class>
-        <class name="FileAnalysisService.DTO.FileDto" filename="DTO\FileAnalysisDto.cs" line-rate="0" branch-rate="1" complexity="3">
+        <class name="FileAnalysisService.DTO.FileDto" filename="DTO\FileAnalysisDto.cs" line-rate="1" branch-rate="1" complexity="3">
           <methods>
-            <method name="get_Id" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="get_Id" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="7" hits="0" branch="False" />
+                <line number="7" hits="3" branch="False" />
               </lines>
             </method>
-            <method name="get_Content" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="get_Content" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="8" hits="0" branch="False" />
+                <line number="8" hits="4" branch="False" />
               </lines>
             </method>
-            <method name="get_FileName" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="get_FileName" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="9" hits="0" branch="False" />
+                <line number="9" hits="4" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="7" hits="0" branch="False" />
-            <line number="8" hits="0" branch="False" />
-            <line number="9" hits="0" branch="False" />
+            <line number="7" hits="3" branch="False" />
+            <line number="8" hits="4" branch="False" />
+            <line number="9" hits="4" branch="False" />
           </lines>
         </class>
-        <class name="FileAnalysisService.DTO.FileAnalysisResponceDto" filename="DTO\FileAnalysisDto.cs" line-rate="0" branch-rate="1" complexity="6">
+        <class name="FileAnalysisService.DTO.FileAnalysisResponceDto" filename="DTO\FileAnalysisDto.cs" line-rate="1" branch-rate="1" complexity="6">
           <methods>
-            <method name="get_AnalysisId" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="get_AnalysisId" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="13" hits="0" branch="False" />
+                <line number="13" hits="3" branch="False" />
               </lines>
             </method>
-            <method name="get_FileId" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="get_FileId" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="14" hits="0" branch="False" />
+                <line number="14" hits="3" branch="False" />
               </lines>
             </method>
-            <method name="get_ParagraphCount" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="get_ParagraphCount" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="15" hits="0" branch="False" />
+                <line number="15" hits="3" branch="False" />
               </lines>
             </method>
-            <method name="get_WordCount" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="get_WordCount" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="16" hits="0" branch="False" />
+                <line number="16" hits="3" branch="False" />
               </lines>
             </method>
-            <method name="get_CharCount" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="get_CharCount" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="17" hits="0" branch="False" />
+                <line number="17" hits="3" branch="False" />
               </lines>
             </method>
-            <method name="get_WordCloudImagePath" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="get_WordCloudImagePath" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="18" hits="0" branch="False" />
+                <line number="18" hits="4" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="13" hits="0" branch="False" />
-            <line number="14" hits="0" branch="False" />
-            <line number="15" hits="0" branch="False" />
-            <line number="16" hits="0" branch="False" />
-            <line number="17" hits="0" branch="False" />
-            <line number="18" hits="0" branch="False" />
+            <line number="13" hits="3" branch="False" />
+            <line number="14" hits="3" branch="False" />
+            <line number="15" hits="3" branch="False" />
+            <line number="16" hits="3" branch="False" />
+            <line number="17" hits="3" branch="False" />
+            <line number="18" hits="4" branch="False" />
           </lines>
         </class>
-        <class name="FileAnalysisService.DTO.FilePlagiarismRequestDTO" filename="DTO\FilePlagiarismDto.cs" line-rate="0" branch-rate="1" complexity="2">
+        <class name="FileAnalysisService.DTO.FilePlagiarismRequestDTO" filename="DTO\FilePlagiarismDto.cs" line-rate="1" branch-rate="1" complexity="2">
           <methods>
-            <method name="get_FileId" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="get_FileId" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="5" hits="0" branch="False" />
+                <line number="5" hits="2" branch="False" />
               </lines>
             </method>
-            <method name="get_OtherFileId" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="get_OtherFileId" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="6" hits="0" branch="False" />
+                <line number="6" hits="2" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="5" hits="0" branch="False" />
-            <line number="6" hits="0" branch="False" />
+            <line number="5" hits="2" branch="False" />
+            <line number="6" hits="2" branch="False" />
           </lines>
         </class>
-        <class name="FileAnalysisService.DTO.FilePlagiarismResponceDto" filename="DTO\FilePlagiarismDto.cs" line-rate="0" branch-rate="1" complexity="3">
+        <class name="FileAnalysisService.DTO.FilePlagiarismResponceDto" filename="DTO\FilePlagiarismDto.cs" line-rate="1" branch-rate="1" complexity="3">
           <methods>
-            <method name="get_FileId" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="get_FileId" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="12" hits="0" branch="False" />
+                <line number="12" hits="4" branch="False" />
               </lines>
             </method>
-            <method name="get_OtherFileId" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="get_OtherFileId" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="13" hits="0" branch="False" />
+                <line number="13" hits="4" branch="False" />
               </lines>
             </method>
-            <method name="get_SimilarityPercentage" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="get_SimilarityPercentage" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="14" hits="0" branch="False" />
+                <line number="14" hits="6" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="12" hits="0" branch="False" />
-            <line number="13" hits="0" branch="False" />
-            <line number="14" hits="0" branch="False" />
+            <line number="12" hits="4" branch="False" />
+            <line number="13" hits="4" branch="False" />
+            <line number="14" hits="6" branch="False" />
           </lines>
         </class>
         <class name="FileAnalysisService.Database.FileAnalysisDBContext" filename="Database\FileAnalysisDBContext.cs" line-rate="1" branch-rate="1" complexity="4">
