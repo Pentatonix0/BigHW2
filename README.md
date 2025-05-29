@@ -72,6 +72,17 @@
 
 ![](Images/img6.png)
 
+### Сравнение файлов на антиплагиат
+
+-Клиент отправляет запрос на сравнение двух файлов через API Gateway на эндпоинт `/gateway/analysis/compare`.
+-API Gateway перенаправляет запрос на POST `/api/analysis/compare в FileAnalysisService`.
+-FileAnalysisService запрашивает содержимое обоих файлов у FileStoringService по их идентификаторам (FileId и OtherFileId) через IFileStoringServiceClient.
+-FileAnalysisService использует IFilesPlagiarismService для сравнения содержимого файлов и вычисления процента схожести.
+-Результат сравнения (процент схожести) возвращается клиенту в формате JSON (FilePlagiarismResponceDto, HTTP 200 OK). Если один из файлов не найден, возвращается `404 NotFound`.
+
+![](Images/img10.png)
+![](Images/img11.png)
+
 ---
 
 ## 3. Компоненты системы
