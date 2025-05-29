@@ -128,3 +128,4 @@ E:\HSE\course2\software design\seminars\BigHW2\FileStoringService.Tests\obj\Debu
 E:\HSE\course2\software design\seminars\BigHW2\FileStoringService.Tests\obj\Debug\net8.0\FileStoringService.Tests.pdb
 E:\HSE\course2\software design\seminars\BigHW2\FileStoringService.Tests\obj\Debug\net8.0\FileStoringService.Tests.genruntimeconfig.cache
 E:\HSE\course2\software design\seminars\BigHW2\FileStoringService.Tests\obj\Debug\net8.0\ref\FileStoringService.Tests.dll
+E:\HSE\course2\software design\seminars\BigHW2\FileStoringService.Tests\obj\Debug\net8.0\FileStoringService.Tests.sourcelink.json

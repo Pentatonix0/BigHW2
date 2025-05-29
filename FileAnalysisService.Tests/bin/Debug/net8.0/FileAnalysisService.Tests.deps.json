@@ -15,6 +15,7 @@
           "Microsoft.NET.Test.Sdk": "17.11.1",
           "Moq": "4.20.70",
           "RichardSzalay.MockHttp": "7.0.0",
+          "coverlet.collector": "6.0.4",
           "xunit": "2.9.2",
           "xunit.runner.visualstudio": "2.8.2"
         },
@@ -33,6 +34,7 @@
           }
         }
       },
+      "coverlet.collector/6.0.4": {},
       "Microsoft.AspNetCore.OpenApi/8.0.16": {
         "dependencies": {
           "Microsoft.OpenApi": "1.6.14"
@@ -653,6 +655,13 @@
       "sha512": "sha512-rpYtIczkzGpf+EkZgDr9CClTdemhsrwA/W5hMoPjLkRFnXzH44zDLoovXeKtmxb1ykXK9aJVODSpiJml8CTw2g==",
       "path": "castle.core/5.1.1",
       "hashPath": "castle.core.5.1.1.nupkg.sha512"
+    },
+    "coverlet.collector/6.0.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-lkhqpF8Pu2Y7IiN7OntbsTtdbpR1syMsm2F3IgX6ootA4ffRqWL5jF7XipHuZQTdVuWG/gVAAcf8mjk8Tz0xPg==",
+      "path": "coverlet.collector/6.0.4",
+      "hashPath": "coverlet.collector.6.0.4.nupkg.sha512"
     },
     "Microsoft.AspNetCore.OpenApi/8.0.16": {
       "type": "package",

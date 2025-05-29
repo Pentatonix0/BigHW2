@@ -128,3 +128,5 @@ E:\HSE\course2\software design\seminars\BigHW2\FileAnalysisService.Tests\bin\Deb
 E:\HSE\course2\software design\seminars\BigHW2\FileAnalysisService.Tests\bin\Debug\net8.0\zh-Hant\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
 E:\HSE\course2\software design\seminars\BigHW2\FileAnalysisService.Tests\bin\Debug\net8.0\zh-Hant\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
 E:\HSE\course2\software design\seminars\BigHW2\FileAnalysisService.Tests\bin\Debug\net8.0\zh-Hant\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+E:\HSE\course2\software design\seminars\BigHW2\FileAnalysisService.Tests\bin\Debug\net8.0\CoverletSourceRootsMapping_FileAnalysisService.Tests
+E:\HSE\course2\software design\seminars\BigHW2\FileAnalysisService.Tests\obj\Debug\net8.0\FileAnalysisService.Tests.sourcelink.json
