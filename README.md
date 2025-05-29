@@ -66,19 +66,19 @@
 
 ### Получение всех файлов
 
--Клиент отправляет запрос на получение списка всех файлов через API Gateway на эндпоинт `/gateway/files/all_files`.
--API Gateway перенаправляет запрос на GET `/api/files/all_files в FileStoringService`.
--FileStoringService извлекает метаданные всех файлов из PostgreSQL (таблица StoredFiles) и возвращает список с информацией о файлах (ID, имя файла, размер, дата загрузки, хэш) в формате JSON (HTTP 200 OK). Если файлы не найдены, возвращается 404 NotFound.
+-   Клиент отправляет запрос на получение списка всех файлов через API Gateway на эндпоинт `/gateway/files/all_files`.
+-   API Gateway перенаправляет запрос на GET `/api/files/all_files в FileStoringService`.
+-   FileStoringService извлекает метаданные всех файлов из PostgreSQL (таблица StoredFiles) и возвращает список с информацией о файлах (ID, имя файла, размер, дата загрузки, хэш) в формате JSON (HTTP 200 OK). Если файлы не найдены, возвращается 404 NotFound.
 
 ![](Images/img6.png)
 
 ### Сравнение файлов на антиплагиат
 
--Клиент отправляет запрос на сравнение двух файлов через API Gateway на эндпоинт `/gateway/analysis/compare`.
--API Gateway перенаправляет запрос на POST `/api/analysis/compare в FileAnalysisService`.
--FileAnalysisService запрашивает содержимое обоих файлов у FileStoringService по их идентификаторам (FileId и OtherFileId) через IFileStoringServiceClient.
--FileAnalysisService использует IFilesPlagiarismService для сравнения содержимого файлов и вычисления процента схожести.
--Результат сравнения (процент схожести) возвращается клиенту в формате JSON (FilePlagiarismResponceDto, HTTP 200 OK). Если один из файлов не найден, возвращается `404 NotFound`.
+-   Клиент отправляет запрос на сравнение двух файлов через API Gateway на эндпоинт `/gateway/analysis/compare`.
+-   API Gateway перенаправляет запрос на POST `/api/analysis/compare в FileAnalysisService`.
+-   FileAnalysisService запрашивает содержимое обоих файлов у FileStoringService по их идентификаторам (FileId и OtherFileId) через IFileStoringServiceClient.
+-   FileAnalysisService использует IFilesPlagiarismService для сравнения содержимого файлов и вычисления процента схожести.
+-   Результат сравнения (процент схожести) возвращается клиенту в формате JSON (FilePlagiarismResponceDto, HTTP 200 OK). Если один из файлов не найден, возвращается `404 NotFound`.
 
 ![](Images/img10.png)
 ![](Images/img11.png)
