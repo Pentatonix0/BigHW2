@@ -66,7 +66,7 @@
 
 ### Получение всех файлов
 
--   Клиент отправляет запрос на получение списка всех файлов через API Gateway на эндпоинт `/gateway/files/all_files`.
+-   Клиент отправляет запрос на получение списка всех файлов через API Gateway на эндпоинт `/api/files/all_files`.
 -   API Gateway перенаправляет запрос на GET `/api/files/all_files в FileStoringService`.
 -   FileStoringService извлекает метаданные всех файлов из PostgreSQL (таблица StoredFiles) и возвращает список с информацией о файлах (ID, имя файла, размер, дата загрузки, хэш) в формате JSON (HTTP 200 OK). Если файлы не найдены, возвращается 404 NotFound.
 
@@ -74,7 +74,7 @@
 
 ### Сравнение файлов на антиплагиат
 
--   Клиент отправляет запрос на сравнение двух файлов через API Gateway на эндпоинт `/gateway/analysis/compare`.
+-   Клиент отправляет запрос на сравнение двух файлов через API Gateway на эндпоинт `/api/analysis/compare`.
 -   API Gateway перенаправляет запрос на POST `/api/analysis/compare в FileAnalysisService`.
 -   FileAnalysisService запрашивает содержимое обоих файлов у FileStoringService по их идентификаторам (FileId и OtherFileId) через IFileStoringServiceClient.
 -   FileAnalysisService использует IFilesPlagiarismService для сравнения содержимого файлов и вычисления процента схожести.
@@ -92,8 +92,8 @@
 -   Технологии: ASP.NET Core, YARP, OpenApi (Swagger).
 -   Конфигурация: маршруты задаются в `appsettings.json`.
 -   Основные маршруты:
-    -   `/gateway/files/*` → FileStoringService
-    -   `/gateway/analysis/*` → FileAnalysisService
+    -   `/api/files/*` → FileStoringService
+    -   `/api/analysis/*` → FileAnalysisService
 -   Особенности: агрегирует Swagger-документации, использует устойчивые HttpClient-политики, Swagger UI доступен в режиме разработки.
 
 ### 3.2 FileStoringService
